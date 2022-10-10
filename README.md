@@ -1,6 +1,6 @@
 # Act-Our-App
 
-## Mostra tots els contenidor que hi ha corrent
+## Mostra tots els contenidors que hi ha corrent.
 
 > ### ***Sintaxi***
 > ``` bash
@@ -18,7 +18,7 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED      ST
 3dc3f49b7582   docker/getting-started   "/docker-entrypoint.…"   3 days ago   Up 3 days   0.0.0.0:80->80/tcp, :::80->80/tcp   kind_goldberg
 ```
 
-## Mostra tots els contenidor que hi ha corrent o aturats
+## Mostra tots els contenidor que hi ha corrent o aturats.
 
 ``` bash
 $ docker ps -a
@@ -31,7 +31,7 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED      ST
 c1ec48a5d129   hello-world              "/hello"                 3 days ago   Exited (0) 3 days ago                                          festive_elgamal
 ```
 
-## Comanda per aturar contenidors
+## Comanda per aturar els contenidors.
 
 > ### ***Sintaxi***
 > ``` bash
@@ -112,7 +112,7 @@ $ docker exec -it ourApp-pardo sh
 / # 
 ```
 
-Un cop que som dins de la consola del nostre contenidor, abans de continuar li cambiarem el ```prompt```.
+Un cop que som dins de la consola del nostre contenidor, abans de continuar li canviarem el ```prompt```.
 
 ```bash
 $export PS1="\u@\h \w> "
@@ -130,9 +130,9 @@ root@36107d8aaa1c /> exit
 
 Fins aquí hem après diferents comandes de ```docker```. Ara passarem a crear un nou contenidor a on instal·larem una aplicació.
 
-Un cop tornem a estar al nostre host, ens descarragarem el fitxer que ens baixarà la nostra aplicació.
+Un cop tornem a estar al nostre host, ens descarregarem el fitxer que ens baixarà la nostra aplicació.
 
-Per fer-ho seguirem els següents pasos:
+Per fer-ho seguirem els següents passos:
 
 **1.** Crearem una carpeta amb el nom de ```<cognomAlumne>-our-app``` i ens col·locarem a l'interior.
 
@@ -152,14 +152,14 @@ total 3012
 -rw-rw-r-- 1 joan joan 3083710 Oct 10 07:14 master.zip
 ```
 
-**2.** A continucaió descomprimim el fitxer que ens hem descarregat.
+**2.** A continuació descomprimim el fitxer que ens hem descarregat.
 
 ```bash
 ~/<cognomAlumne>-our-app $ unzip master.zip 
 Command 'unzip' not found, but can be installed with:
 ```
 
-**2.b.** I si no tenim el programa ```unzip``` l'instal·lem.
+**2.b.** I si no tenim el programa ```unzip```, ens l'instal·lem.
 
 ```bash
 sudo apt install unzip
@@ -241,7 +241,7 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ~/<cognomAlumne>-our-app/getting-started-master/app $
 ```
 
-**6.** Llistem el seu contigut i confirmem que hi ha un fitxer anomenat ```package.json``` en aquest fitxer guardem part de la configuració pel contenidor que anem a crear. I també trobem dues carpetes amb els noms ```spec``` i ```src``` que contenen el codi font de la nostra aplicació.
+**6.** Llistem el seu contingut i confirmem que hi ha un fitxer anomenat ```package.json``` en aquest fitxer guardem part de la configuració pel contenidor que crearem. I també trobem dues carpetes amb els noms ```spec``` i ```src``` que contenen el codi font de la nostra aplicació.
 
 ```bash
 ~/<cognomAlumne>-our-app/getting-started-master/app $ ls -l
@@ -254,7 +254,7 @@ drwxrwxr-x 5 joan joan   4096 Aug 30 12:55 src
 ```
 
 
-**7.** A la mateixa carpeta a on es troba el fitxer anomenat ```package.json```, és a dir dins de la carpeta anomenada ```app``` cal que creem el següent fitxer ```Dockerfile```. És **TAN** imporant a **on es troba** aquest fitxer, com **el nom**, ja que si el nom no és ```Dockerfile```, no funcionarà! Per crear el fitxer farem servir ```**vi**```.
+**7.** A la mateixa carpeta a on es troba el fitxer anomenat ```package.json```, és a dir dins de la carpeta anomenada ```app```, cal que creem el següent fitxer ```Dockerfile```. És **TAN** important a **on es troba** aquest fitxer, com **el nom**, ja que si el nom no és ```Dockerfile```, no funcionarà! Per crear el fitxer farem servir ```**vi**```.
 
 ```bash
 ~/<cognomAlumne>-our-app/getting-started-master/app $ vi Dockerfile
@@ -272,7 +272,7 @@ Un cop siguem dins de l'editor vi, el fitxer estarà buit.
  "Dockerfile" [New]                                                                  0,0-1         All
 ```
 
-**8.** Ara pitjem la tecla **```i```** de **Insert**.
+**8.** Ara pitgem la tecla **```i```** d'**Insert**.
 ```bash
  
  ~
@@ -282,7 +282,7 @@ Un cop siguem dins de l'editor vi, el fitxer estarà buit.
  -- INSERT --                                                                        0,1           All
 ```
 
-Veiem com a la part inferior apareix la paruala ```**INSERT**```.
+Veiem com a la part inferior apareix la paraula ```**INSERT**```.
 
 **6.** Ara cal copiar el següent text: 
 ```bash
@@ -296,7 +296,7 @@ CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
 
-**7.** Un cop ja tenim el contingut del fitxer, llavors pitjem *```:wq```*, per guardar i tancar el document.
+**7.** Un cop ja tenim el contingut del fitxer, llavors pitgem *```:wq```*, per guardar i tancar el document.
 
 ```bash
  # syntax=docker/dockerfile:1
