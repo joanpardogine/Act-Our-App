@@ -3,7 +3,7 @@
 ## Mostra tots els contenidor que hi ha corrent
 
 > ### ***Sintaxi***
-``` bash
+> ``` bash
 > docker ps [OPTIONS]
 > ```
 > [més info. a **docker ps** (docs.docker.com)](https://docs.docker.com/engine/reference/commandline/ps/)
@@ -34,7 +34,7 @@ c1ec48a5d129   hello-world              "/hello"                 3 days ago   Ex
 ## Comanda per aturar contenidors
 
 > ### ***Sintaxi***
-``` bash
+> ``` bash
 > $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
 > ```
 > [més info. a **docker stop** (docs.docker.com)](https://docs.docker.com/engine/reference/commandline/stop/)
@@ -54,7 +54,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ## Comanda per esborrar contenidors
 
 > ### ***Sintaxi***
-``` bash
+> ``` bash
 > $ docker rm [OPTIONS] CONTAINER [CONTAINER...]
 > ```
 > [més info. a **docker rm** (docs.docker.com)](https://docs.docker.com/engine/reference/commandline/rm/)
@@ -78,7 +78,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ## Comanda per crear un contenidor amb un nom concret (ourApp-<cognomAlumne>)
 
 > ### ***Sintaxi***
-``` bash
+> ``` bash
 > $ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 > 
 > ```
@@ -99,7 +99,7 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 ## Comanda per executar comandes dins d'un contenidor
 
 > ### ***Sintaxi***
-``` bash
+>  ``` bash
 > $ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 > 
 > ```
@@ -399,7 +399,7 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 **11.** Per poder accedir al contenidor que acabem de crear.
 
 > ### ***Sintaxi***
-``` bash
+> ``` bash
 > $ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 > 
 > ```
