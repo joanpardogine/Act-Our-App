@@ -395,8 +395,48 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 36107d8aaa1c   docker/getting-started   "/docker-entrypoint.…"   6 hours ago      Up 6 hours      0.0.0.0:80->80/tcp, :::80->80/tcp           ourApp-pardo
  ```
 
-**X.**
 
->```bash
+**11.** Per poder accedir al contenidor que acabem de crear.
+
+> ### ***Sintaxi***
+``` bash
+> $ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+> 
 > ```
+> [més info. a **docker exec** (docs.docker.com)](https://docs.docker.com/engine/reference/commandline/exec/)
+> <br>
+<br>
 
+```bash
+$ docker exec -it pardoApp sh
+
+/ # export PS1="\u@\h \w> "
+
+root@6371851095ef /app/src> root@6371851095ef /app> ls -l
+total 192
+-rw-rw-r--    1 root     root           182 Oct 10 09:10 Dockerfile
+drwxr-xr-x  163 root     root          4096 Oct 10 13:36 node_modules
+-rw-rw-r--    1 root     root           646 Aug 30 12:55 package.json
+drwxrwxr-x    4 root     root          4096 Aug 30 12:55 spec
+drwxrwxr-x    5 root     root          4096 Aug 30 12:55 src
+-rw-rw-r--    1 root     root        174891 Aug 30 12:55 yarn.lock
+
+root@6371851095ef /app> cd src
+
+root@6371851095ef /app/src> ls -l
+total 16
+-rw-rw-r--    1 root     root           915 Aug 30 12:55 index.js
+drwxrwxr-x    2 root     root          4096 Aug 30 12:55 persistence
+drwxrwxr-x    2 root     root          4096 Aug 30 12:55 routes
+drwxrwxr-x    4 root     root          4096 Aug 30 12:55 static
+
+root@6371851095ef /app/src>  exit
+~/<cognomAlumne>-our-app/getting-started-master/app $ ls -l
+total 188
+-rw-rw-r-- 1 joan joan    182 Oct 10 09:10 Dockerfile
+-rw-rw-r-- 1 joan joan    646 Aug 30 12:55 package.json
+drwxrwxr-x 4 joan joan   4096 Aug 30 12:55 spec
+drwxrwxr-x 5 joan joan   4096 Oct 10 14:00 src
+-rw-rw-r-- 1 joan joan 174891 Aug 30 12:55 yarn.lock
+ 
+```
