@@ -1,4 +1,6 @@
-# Act-Our-App
+# Activitat la nostra aplicació
+
+Seguirem el següent enllaç [**Sample application** (docs.docker)](https://docs.docker.com/get-started/02_our_app/)
 
 ## Mostra tots els contenidors que hi ha corrent.
 
@@ -120,14 +122,14 @@ root@36107d8aaa1c />
 $
 ```
 
-Així veiem quin és el nom de l'usuari, seguit del servidor i per últim el directori a on ens trobem.
-Fixeu-vos que el nom del host, és el mateix que la part de l'identificador del contenidor, que es mostra quan se'ns llista la informació dels contenidors.
+Així veiem quin és el **nom de l'usuari** (```\u```), seguit del **nom del servidor** (```\h```) i per últim el **directori** (```\w```) a on ens trobem.
+
+Fixeu-vos que el nom del **host**, és el mateix que la part de l'identificador del contenidor (**```36107d8aaa1c```**), que es mostra quan se'ns llista la informació dels contenidors.
 
 A continuació executem el següent per tancar la sessió del contenidor:
 ```bash
 root@36107d8aaa1c /> exit
 ```
-
 Fins aquí hem après diferents comandes de ```docker```. Ara passarem a crear un nou contenidor a on instal·larem una aplicació.
 
 Un cop tornem a estar al nostre host, ens descarregarem el fitxer que ens baixarà la nostra aplicació.
@@ -149,7 +151,7 @@ Per fer-ho seguirem els següents passos:
  'master.zip' saved
  ~/<cognomAlumne>-our-app $  ls -l
 total 3012
--rw-rw-r-- 1 joan joan 3083710 Oct 10 07:14 master.zip
+-rw-rw-r-- 1 joan joan 3083710 Jan 01 00:00 master.zip
 ```
 
 **2.** A continuació descomprimim el fitxer que ens hem descarregat.
@@ -211,8 +213,8 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
    inflating: getting-started-master/yarn.lock
  ~/<cognomAlumne>-our-app $ ls -l
  total 3016
- drwxrwxrwx    5 root     root          4096 Oct 10 08:24 getting-started-master
- -rw-r--r--    1 root     root       3083710 Oct 10 08:19 master.zip
+ drwxrwxrwx    5 root     root          4096 Jan 01 00:00 getting-started-master
+ -rw-r--r--    1 root     root       3083710 Jan 01 00:00 master.zip
 ```
 
 **4.** Entrem a la carpeta ```getting-started-master``` i llistem el seu contingut:
@@ -220,17 +222,17 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
  ~/<cognomAlumne>-our-app>cd getting-started-master
  ~/<cognomAlumne>-our-app/getting-started-master> ls -l
  total 52
- -rw-r--r--    1 root     root          1078 Oct 10 08:24 Dockerfile
- -rw-r--r--    1 root     root           535 Oct 10 08:24 Jenkinsfile
- -rw-r--r--    1 root     root         11356 Oct 10 08:24 LICENSE
- -rw-r--r--    1 root     root          1668 Oct 10 08:24 README.md
- drwxrwxrwx    4 root     root          4096 Oct 10 08:24 app
- -rwxr-xr-x    1 root     root           253 Oct 10 08:24 build.sh
- -rw-r--r--    1 root     root           167 Oct 10 08:24 docker-compose.yml
- drwxrwxrwx    6 root     root          4096 Oct 10 08:24 docs
- -rw-r--r--    1 root     root          1990 Oct 10 08:24 mkdocs.yml
- -rw-r--r--    1 root     root           105 Oct 10 08:24 requirements.txt
- -rw-r--r--    1 root     root            86 Oct 10 08:24 yarn.lock
+ -rw-r--r--    1 root     root          1078 Jan 01 00:00 Dockerfile
+ -rw-r--r--    1 root     root           535 Jan 01 00:00 Jenkinsfile
+ -rw-r--r--    1 root     root         11356 Jan 01 00:00 LICENSE
+ -rw-r--r--    1 root     root          1668 Jan 01 00:00 README.md
+ drwxrwxrwx    4 root     root          4096 Jan 01 00:00 app
+ -rwxr-xr-x    1 root     root           253 Jan 01 00:00 build.sh
+ -rw-r--r--    1 root     root           167 Jan 01 00:00 docker-compose.yml
+ drwxrwxrwx    6 root     root          4096 Jan 01 00:00 docs
+ -rw-r--r--    1 root     root          1990 Jan 01 00:00 mkdocs.yml
+ -rw-r--r--    1 root     root           105 Jan 01 00:00 requirements.txt
+ -rw-r--r--    1 root     root            86 Jan 01 00:00 yarn.lock
  
  ```
 
@@ -246,10 +248,10 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ```bash
 ~/<cognomAlumne>-our-app/getting-started-master/app $ ls -l
 total 184
--rw-rw-r-- 1 joan joan    646 Aug 30 12:55 package.json
-drwxrwxr-x 4 joan joan   4096 Aug 30 12:55 spec
-drwxrwxr-x 5 joan joan   4096 Aug 30 12:55 src
--rw-rw-r-- 1 joan joan 174891 Aug 30 12:55 yarn.lock
+-rw-rw-r-- 1 joan joan    646 Jan 01 00:00 package.json
+drwxrwxr-x 4 joan joan   4096 Jan 01 00:00 spec
+drwxrwxr-x 5 joan joan   4096 Jan 01 00:00 src
+-rw-rw-r-- 1 joan joan 174891 Jan 01 00:00 yarn.lock
 ~/<cognomAlumne>-our-app/getting-started-master/app $ 
 ```
 
@@ -319,11 +321,11 @@ EXPOSE 3000
 ```bash
  ~/<cognomAlumne>-our-app/getting-started-master/app $ ls -l
  total 188
- -rw-rw-r-- 1 joan joan    182 Oct 10 09:10 Dockerfile
- -rw-rw-r-- 1 joan joan    646 Aug 30 12:55 package.json
- drwxrwxr-x 4 joan joan   4096 Aug 30 12:55 spec
- drwxrwxr-x 5 joan joan   4096 Aug 30 12:55 src
- -rw-rw-r-- 1 joan joan 174891 Aug 30 12:55 yarn.lock
+ -rw-rw-r-- 1 joan joan    182 Jan 01 00:00 Dockerfile
+ -rw-rw-r-- 1 joan joan    646 Jan 01 00:00 package.json
+ drwxrwxr-x 4 joan joan   4096 Jan 01 00:00 spec
+ drwxrwxr-x 5 joan joan   4096 Jan 01 00:00 src
+ -rw-rw-r-- 1 joan joan 174891 Jan 01 00:00 yarn.lock
  ~/<cognomAlumne>-our-app/getting-started-master/app $ 
 ```
 
@@ -414,29 +416,29 @@ $ docker exec -it pardoApp sh
 
 root@6371851095ef /app/src> root@6371851095ef /app> ls -l
 total 192
--rw-rw-r--    1 root     root           182 Oct 10 09:10 Dockerfile
-drwxr-xr-x  163 root     root          4096 Oct 10 13:36 node_modules
--rw-rw-r--    1 root     root           646 Aug 30 12:55 package.json
-drwxrwxr-x    4 root     root          4096 Aug 30 12:55 spec
-drwxrwxr-x    5 root     root          4096 Aug 30 12:55 src
--rw-rw-r--    1 root     root        174891 Aug 30 12:55 yarn.lock
+-rw-rw-r--    1 root     root           182 Jan 01 00:00 Dockerfile
+drwxr-xr-x  163 root     root          4096 Jan 01 00:00 node_modules
+-rw-rw-r--    1 root     root           646 Jan 01 00:00 package.json
+drwxrwxr-x    4 root     root          4096 Jan 01 00:00 spec
+drwxrwxr-x    5 root     root          4096 Jan 01 00:00 src
+-rw-rw-r--    1 root     root        174891 Jan 01 00:00 yarn.lock
 
 root@6371851095ef /app> cd src
 
 root@6371851095ef /app/src> ls -l
 total 16
--rw-rw-r--    1 root     root           915 Aug 30 12:55 index.js
-drwxrwxr-x    2 root     root          4096 Aug 30 12:55 persistence
-drwxrwxr-x    2 root     root          4096 Aug 30 12:55 routes
-drwxrwxr-x    4 root     root          4096 Aug 30 12:55 static
+-rw-rw-r--    1 root     root           915 Jan 01 00:00 index.js
+drwxrwxr-x    2 root     root          4096 Jan 01 00:00 persistence
+drwxrwxr-x    2 root     root          4096 Jan 01 00:00 routes
+drwxrwxr-x    4 root     root          4096 Jan 01 00:00 static
 
 root@6371851095ef /app/src>  exit
 ~/<cognomAlumne>-our-app/getting-started-master/app $ ls -l
 total 188
--rw-rw-r-- 1 joan joan    182 Oct 10 09:10 Dockerfile
--rw-rw-r-- 1 joan joan    646 Aug 30 12:55 package.json
-drwxrwxr-x 4 joan joan   4096 Aug 30 12:55 spec
-drwxrwxr-x 5 joan joan   4096 Oct 10 14:00 src
--rw-rw-r-- 1 joan joan 174891 Aug 30 12:55 yarn.lock
+-rw-rw-r-- 1 joan joan    182 Jan 01 00:00 Dockerfile
+-rw-rw-r-- 1 joan joan    646 Jan 01 00:00 package.json
+drwxrwxr-x 4 joan joan   4096 Jan 01 00:00 spec
+drwxrwxr-x 5 joan joan   4096 Jan 01 00:00 src
+-rw-rw-r-- 1 joan joan 174891 Jan 01 00:00 yarn.lock
  
 ```
