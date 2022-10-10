@@ -1,6 +1,8 @@
-# Mostra tots els contenidor que hi ha corrent
+# Act-Our-App
 
-> ## Sintaxi
+## Mostra tots els contenidor que hi ha corrent
+
+> ### Sintaxi
 > ``` bash
 > $ docker ps [OPTIONS]
 > ```
@@ -16,7 +18,7 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED      ST
 3dc3f49b7582   docker/getting-started   "/docker-entrypoint.…"   3 days ago   Up 3 days   0.0.0.0:80->80/tcp, :::80->80/tcp   kind_goldberg
 ```
 
-# Mostra tots els contenidor que hi ha corrent o aturats
+## Mostra tots els contenidor que hi ha corrent o aturats
 
 ``` bash
 docker ps -a
@@ -29,9 +31,9 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED      ST
 c1ec48a5d129   hello-world              "/hello"                 3 days ago   Exited (0) 3 days ago                                          festive_elgamal
 ```
 
-# Comanda per aturar contenidors
+## Comanda per aturar contenidors
 
-> ## Sintaxi
+> ### Sintaxi
 > ``` bash
 > $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
 > ```
@@ -47,9 +49,9 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
 
-# Comanda per esborrar contenidors
+## Comanda per esborrar contenidors
 
-> ## Sintaxi
+> ### Sintaxi
 > ``` bash
 > $ docker rm [OPTIONS] CONTAINER [CONTAINER...]
 > ```
@@ -69,9 +71,9 @@ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-# Comanda per crear un contenidor amb un nom concret (ourApp-<cognomAlumne>)
+## Comanda per crear un contenidor amb un nom concret (ourApp-<cognomAlumne>)
 
-> ## Sintaxi
+> ### Sintaxi
 > ``` bash
 > $ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 > 
@@ -88,8 +90,8 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 36107d8aaa1c   docker/getting-started   "/docker-entrypoint.…"   5 seconds ago        Up 2 seconds                    0.0.0.0:80->80/tcp, :::80->80/tcp   ourApp-pardo
 ```
 
-# Comanda per executar comandes dins d'un contenidor
-> ## Sintaxi
+## Comanda per executar comandes dins d'un contenidor
+> ### Sintaxi
 > ``` bash
 > $ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 > 
