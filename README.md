@@ -397,14 +397,19 @@ Successfully tagged getting-started:latest
 6371851095efc8657b63e54f74010698ec20abc54be0ecfbcc794f62bdaf8e77
 
  ~/<cognomAlumne>-our-app/getting-started-master/app $ sudo docker ps
- 
+
 CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                       NAMES
 6371851095ef   getting-started          "docker-entrypoint.s…"   19 seconds ago   Up 18 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   pardoApp
 36107d8aaa1c   docker/getting-started   "/docker-entrypoint.…"   6 hours ago      Up 6 hours      0.0.0.0:80->80/tcp, :::80->80/tcp           ourApp-pardo
  ```
 
 
-**11.** Per poder accedir al contenidor que acabem de crear.
+
+**11.** Podem veure la nostra aplicació funcionant correctament, visitant l'adreça IP del contenidor i el port 3000.
+
+![la nostra aplicació](./image0001.png)
+
+**12.** Per poder accedir al contenidor que acabem de crear.
 
 > ### ***Sintaxi***
 > ``` bash
